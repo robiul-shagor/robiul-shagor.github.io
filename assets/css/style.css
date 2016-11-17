@@ -357,7 +357,7 @@ html, body {
     left: 0;
     top: 0;
     background: rgba(0, 0, 0, 0);
-    opacity: 0;
+   	opacity: 0;
     z-index: 3;
     pointer-events: none;
     -webkit-transform: translate3d(0, 0, 0);
@@ -770,13 +770,56 @@ html, body {
 }
 
 .main .intro {
-	padding: 120px 10px 100px 10px;
+	padding: 120px 5% 120px 49%;
+}
+.main .intro {
+	position: relative;
+	z-index: 99;
 }
 
 .main .intro img {
 	margin-bottom: 50px;
 }
 
+.main .intro {
+	position: relative;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+@media only screen and (min-width: 1500px) {
+	.intro-content {
+		max-width: 600px;
+	}
+}
+.main .intro:before {
+	 display: block;
+	 content: "";
+	 width: 100%;
+	 height: 100%;
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 z-index: -1;
+	 background: rgba(255, 255, 255, 0.75);
+	 transform: translateZ(-1px) scale(2);
+	 -webkit-transform: translate3d(0, 0, 0);
+	 -moz-transform: translate3d(0, 0, 0);
+	 -ms-transform: translate3d(0, 0, 0);
+	 -o-transform: translate3d(0, 0, 0);
+	 transform: translate3d(0, 0, 0);
+	 -webkit-backface-visibility: hidden;
+	 -moz-backface-visibility: hidden;
+	 -ms-backface-visibility: hidden;
+	 -o-backface-visibility: hidden;
+	 backface-visibility: hidden;
+	 -webkit-transition: opacity 0.5s ease, height 1ms 0.5s ease;
+	 -moz-transition: opacity 0.5s ease, height 1ms 0.5s ease;
+	 -o-transition: opacity 0.5s ease, height 1ms 0.5s ease;
+	 transition: opacity 0.5s ease, height 1ms 0.5s ease;
+}
 .main .intro h4 {
 	font-family: 'Poppins';
 	font-size: 14px;
@@ -792,11 +835,11 @@ html, body {
 	font-size: 32px;
 	color: #161616;
 	line-height: 1.2;
-	text-align: center;
 	font-family: 'Playfair Display';
 	font-weight: 700;
 	font-style: normal;
 	letter-spacing: 0;
+	line-height: 1.45em;
 }
 
 .btn-action {
@@ -809,7 +852,8 @@ html, body {
 	background: #111111;
 	border-radius: 0;
 	border-color: #111111;
-	letter-spacing: 2px;
+	letter-spacing: 0.015em;
+	font-weight: 600;
 	text-transform: uppercase;
 	margin: 50px auto;
 	-webkit-transition: 0.4s;
@@ -1013,7 +1057,10 @@ html, body {
 }
 
 .portfolio-button {
-	padding: 30px 0 30px 0;
+	padding: 30px 0 0 0;
+}
+.portfolio-button a {
+	margin-bottom: 0;
 }
 
 
@@ -1209,7 +1256,8 @@ html, body {
 
 
 .pitch {
-	padding: 0 0 150px 0;
+	background: #fff;
+	padding: 90px 0 75px;
 }
 
 .pitch .inner h1 {
@@ -1502,7 +1550,7 @@ label {
 
 
 .footer .cta {
-	padding:  0 0 100px 0;
+	padding:  0;
 }
 
 .footer .cta h1 {
@@ -1546,8 +1594,11 @@ label {
 }
 
 .footer .social ul li {
-	display: inline;
+	display: inline-block;
 	margin-right: 15px;
+}
+.footer .social ul li:last-child {
+	margin-right: 0;
 }
 
 .footer .social ul li a {
@@ -1575,6 +1626,9 @@ label {
 	line-height: 1.4;
 }
 
+.footer .social {
+	margin-top: 20px;
+}
 
 
 /*----------------------------------------------------
@@ -1694,7 +1748,7 @@ label {
 		}
 
 		.footer {
-			padding: 100px 0 50px 0;
+			padding: 100px 0 100px 0;
 		}
 
 		.footer .cta h1 {
