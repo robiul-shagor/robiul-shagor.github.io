@@ -783,6 +783,7 @@ html, body {
 
 .main .intro {
 	position: relative;
+	background-size: cover;
 	background-position: 50% 0;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
