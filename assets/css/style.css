@@ -792,6 +792,9 @@ html, body {
 	.intro-content {
 		max-width: 600px;
 	}
+	.main .intro {
+		padding: 250px 5% 250px 49%;
+	}
 }
 .main .intro:before {
 	 display: block;
