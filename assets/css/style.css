@@ -796,6 +796,13 @@ html, body {
 		padding: 250px 5% 250px 49%;
 	}
 }
+@media only screen and (max-width: 767px) {
+	.main .intro {
+		background-position: 20% 0;
+	/*	background-attachment: inherit;*/
+		padding: 60px 30px;
+	}
+}
 .main .intro:before {
 	 display: block;
 	 content: "";
@@ -1028,7 +1035,11 @@ html, body {
 .portfolio-page {
 	padding: 100px 0 0 0;
 }
-
+@media only screen and (max-width: 768px) {
+	.main .portfolio {
+		padding-top: 75px;
+	}
+}
 .portfolio-intro {
 	text-align: center;
 	padding: 0 0 50px 0;

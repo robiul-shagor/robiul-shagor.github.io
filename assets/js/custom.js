@@ -25,7 +25,14 @@ $('.parallax').each(function(){
 	$(window).scroll(function() { 
 		var yPos = -($(window).scrollTop() / $obj.data('speed')); 
 		var bgpos = '50% '+ yPos + 'px'; 
-		$obj.css('background-position', bgpos ); 
+		$obj.css('background-position', bgpos );
+		if($(window).width() <= 540) {
+			var bgpos = '20% '+ yPos + 'px'; 
+			$obj.css('background-position', bgpos );
+		} else {
+			var bgpos = '50% '+ yPos + 'px'; 
+			$obj.css('background-position', bgpos );
+		}
 	}); 
 });
 
